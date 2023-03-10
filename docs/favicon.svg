@@ -1,0 +1,11 @@
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <defs></defs>
+  <rect x="66.539" y="142.798" width="347.207" height="281.463" style="stroke-linecap: round; stroke-linejoin: round; fill: rgb(128, 72, 50); stroke-dashoffset: -1px; stroke: rgb(8, 8, 8); stroke-width: 17px;"></rect>
+  <rect x="66.539" y="83.194" width="347.207" height="59.604" style="stroke-linecap: round; stroke-linejoin: round; fill: rgb(69, 41, 30); stroke-dashoffset: -1px; stroke: rgb(8, 8, 8); stroke-width: 17px;"></rect>
+  <rect x="107.514" y="181.43" width="40" height="42.726" style="stroke-width: 4px; stroke: rgb(0, 0, 0); fill: rgb(200, 177, 177);"></rect>
+  <rect x="108.567" y="251.543" width="38.946" height="39.438" style="stroke: rgb(0, 0, 0); stroke-width: 4px; fill: rgb(200, 177, 177);"></rect>
+  <rect x="108.567" y="318.372" width="35.79" height="35.058" style="stroke: rgb(0, 0, 0); stroke-width: 4px; fill: rgb(200, 177, 177);"></rect>
+  <path style="fill: rgb(216, 216, 216); fill-opacity: 0; stroke-width: 4px; stroke: rgb(18, 18, 18);" d="M 174.368 212.336 C 176.711 211.137 186.323 200.292 189.464 203.506 C 191.036 205.116 201.649 219.731 208.873 212.336 C 218.295 202.691 227.831 216.982 241.222 210.128 C 247.662 206.831 268.011 215.819 273.569 210.128 C 279.369 204.192 306.868 203.506 316.701 203.506"></path>
+  <path style="fill: rgb(216, 216, 216); paint-order: fill; fill-opacity: 0; stroke-width: 4px; stroke: rgb(18, 18, 18);" d="M 164.663 287.393 C 164.663 283.944 179.759 266.421 179.759 266.421 C 179.759 266.421 183.288 291.507 190.542 284.081 C 193.191 281.37 192.986 277.164 194.855 275.251 C 202.861 267.056 231.369 284.233 239.064 276.355 C 239.918 275.481 252.569 269.207 256.317 273.043 C 266.092 283.051 290.093 276.355 301.605 276.355"></path>
+  <path style="fill: rgb(216, 216, 216); fill-opacity: 0; stroke-width: 4px; stroke: rgb(18, 18, 18);" d="M 171.132 342.582 C 171.411 342.391 188.385 331.504 188.385 334.856 C 188.385 338.214 188.926 341.203 191.62 342.582 C 197.375 345.528 204.413 340.449 206.716 339.271 C 212.946 336.083 231.005 341.477 240.143 341.477 C 250.018 341.477 261.696 338.18 267.1 332.648 C 267.256 332.488 278.379 328.741 278.961 329.337 C 284.26 334.761 282.453 341.477 292.979 341.477"></path>
+</svg>

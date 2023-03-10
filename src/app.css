@@ -1,0 +1,227 @@
+:root {
+  --background: #202020;
+  --topbar-bg: #0f0f12;
+  --add-todo-bg: #0f0f12;
+  --hue: 270;
+  --main-fg: #bababf;
+  --gray-color: #666;
+  --todo-width: 750px;
+  --add-todo-width: 600px;
+}
+
+body {
+  color: var(--main-fg);
+  margin: 0;
+  padding: 0;
+  background: #212026;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+#app {
+  height: 100vh;
+  max-height: 100vh;
+  overflow: auto;
+}
+
+.icon {
+  vertical-align: middle;
+}
+
+.topbar {
+  width: 100%;
+  background: var(--topbar-bg);
+  color: var(--main-fg);
+  padding: 0.7em;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5em;
+  border-radius: 0 0 .7em .7em;
+}
+
+.topbar .second .icon {
+  vertical-align: middle;
+  font-size: 1em;
+  color: var(--main-fg);
+}
+
+.topbar .second {
+  cursor: pointer;
+}
+.topbar .first {
+  position: relative;
+}
+.topbar .first .select {
+  margin-right: 0.15em;
+  background: hsl(var(--hue), 53%, 63%);
+  color: var(--topbar-bg);
+  padding: 0 0.15em;
+  border-radius: 0.25em;
+}
+
+.topbar .first .version {
+  font-weight: bold;
+  font-size: 1.25em;
+  position: absolute;
+  padding: 0 0.25em;
+  rotate: 4deg;
+  background: linear-gradient(45deg,
+      hsl(calc(var(--hue) - 20), 50%, 53%),
+      hsl(calc(var(--hue) + 20), 50%, 53%));
+  text-shadow: #fff2 3px 3px 3px;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.topbar .first .settings {
+  font-weight: bold;
+  font-size: 1.25em;
+  position: absolute;
+  padding: 0 0.25em;
+  background: linear-gradient(45deg,
+      hsl(calc(var(--hue) - 30), 50%, 53%),
+      hsl(calc(var(--hue) + 30), 50%, 53%));
+  /* text-shadow: #fff1 3px 3px 3px; */
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.addtodo {
+  max-width: var(--add-todo-width);
+  border-radius: .75em .75em 0 0;
+  padding: 0.75em;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--add-todo-bg);
+  color: var(--main-fg);
+  gap: 0.25em;
+  width: 100%;
+}
+
+.addtodo .button {
+  height: 100%;
+  padding: 0.75em;
+  background: hsl(var(--hue), 37%, 42%);
+  border: none;
+  border-radius: 1em;
+  color: var(--main-fg);
+  transition: 250ms;
+  cursor: pointer;
+}
+
+.addtodo .add {
+  vertical-align: middle;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 8px;
+  color: #fff8;
+  background: hsl(var(--hue), 54%, 30%);
+  transition: 250ms;
+}
+
+
+.addtodo .button .icon {
+  color: #fefeffcc;
+  font-size: 2em;
+  height: 100%;
+  width: 100%;
+  vertical-align: middle;
+  align-items: center;
+  display: inline-flex;
+}
+
+.addtodo .wrap {
+  width: 100%;
+}
+
+.addtodo .input {
+  border: none;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  background: transparent;
+  font-size: 28px;
+  transition: 250ms;
+  border-bottom: #0004 3px solid;
+  padding: 0em;
+  color: var(--main-fg);
+  font-size: 1.5em;
+}
+
+.addtodo .input:focus-within {
+  outline: none;
+}
+
+.addtodo .input:focus {
+  border-bottom-color: hsl(var(--hue), 37%, 42%);
+}
+
+.addtodo .button:hover .icon {
+  color: #fefeff;
+}
+
+.todos {
+  overflow: scroll;
+  padding: 1.25em;
+  padding-bottom: 5em;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.3em;
+}
+
+.todo {
+  display: inline-flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: var(--todo-width);
+  background: #0005;
+  border: #0001 1px solid;
+  border-left: #0006 4px solid;
+}
+
+.todo .body {
+  width: 100%;
+  color: #fefeff;
+  padding: 0.5em;
+}
+
+.todo .remove {
+  /* height: 100%; */
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background: #85333380;
+  display: flex;
+  position: relative;
+  padding: 0.5em;
+  transition: 250ms;
+}
+
+.todo .remove .icon {
+  color: rgba(239, 227, 227, 0.628);
+  transition: 250ms;
+}
+
+.todo .remove:hover .icon {
+  color: #fff;
+}
+
+.todo .remove:hover {
+
+  background: #853333ee;
+}

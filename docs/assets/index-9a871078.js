@@ -1,0 +1,10 @@
+import{o as e,d as l,p as r,h as c,g as u,T as h,q as p}from"./index-baec52f8.js";function m({callbackChange:t,todos:d,settodos:o}){function n(){let s=document.getElementById("addtodoInput").value;if(s){let i=Date.now().toString(),a={time:i,id:i,content:s,additional:{}};o([...d,a]),d=[...d,a],localStorage.setItem("todos",JSON.stringify(d||[])),document.getElementById("addtodoInput").value=""}}return e("div",{class:"addtodo",children:[e("button",{class:"button",onClick:n,children:e("span",{class:"material-symbols-outlined icon",children:"add"})}),e("div",{class:"wrap",children:e("input",{id:"addtodoInput",type:"text",placeholder:"napiš svůj nápad...",onInput:t,class:"input"})})]})}function f({getConfig:t}){return e(l,{children:[e("style",{children:[t().customCss," :root ","{","--hue: ",t().hue,";","}",t().useNeonText=="true"&&`
+        .todo .body {
+          background: linear-gradient(45deg,
+            hsl(calc(var(--hue) - 40), 50%, 75%),
+            hsl(calc(var(--hue) + 40), 50%, 75%));
+          /* text-shadow: #fff1 3px 3px 3px; */
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        `]}),e("link",{rel:"stylesheet",href:"./themes/"+t().theme+".css"}),t().addTheme.replace(/\ /gi,"").split(",").map(d=>e("link",{rel:"stylesheet",href:"./themes/"+d+".css"}))]})}function g({todos:t,settodos:d}){return e("div",{class:"todos",children:t.length>.1?t.map(o=>e("div",{class:"todo",id:"todo_"+o.id,children:[e("div",{class:"body",children:o.content}),e("div",{class:"remove",onClick:()=>{d(t.filter(n=>n.id!==o.id))},children:e("span",{class:"material-symbols-outlined icon",children:"delete"})})]})):e(l,{children:e("h2",{children:"nic tu není..."})})})}function v(){let t=localStorage.getItem("todos")||"";t||(localStorage.setItem("todos","[]"),t="");let[d,o]=r(JSON.parse(t||"[]")||[]);return d||o([]),c(()=>{localStorage.setItem("todos",JSON.stringify(d))},[d]),e(l,{children:[e(f,{getConfig:u}),e(h,{isInSettings:!1,howmuch:d.length}),e(g,{todos:d,settodos:o}),e(m,{todos:d,settodos:o})]})}p(e(v,{}),document.getElementById("app"));

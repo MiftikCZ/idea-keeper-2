@@ -1,0 +1,8 @@
+.todo .body {
+    background: linear-gradient(90deg,
+        hsl(calc(var(--hue) - 40), 50%, 70%),
+        hsl(calc(var(--hue) + 40), 50%, 70%));
+    /* text-shadow: #fff1 3px 3px 3px; */
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
