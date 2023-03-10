@@ -12,9 +12,13 @@
 #### global
 - 🟩 allow user to delete todos  
 - 🟥 add commands like `/lock` `/add last` `/delete last` `/print info` `/set userName booFooBar` ...
+- 🟩 custom css
 - 🟥 ability to choose english instead of czech language
 - 🟥 make the themes work
 - 🟥 allow user to use markdown in todos
+- 🟥 ability to change background color to wallpaper
+- 🟥 ability to select from `transparent ui` and `normal ui`
+- 🟥 workspaces for todos, eg. type `/workspace set school` or `/workspace set superHidden`
 - 🟥 extensions like `use markdown?` or `use textarea?`
 #### add themes
 - 🟥 catppuccin
