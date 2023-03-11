@@ -17,7 +17,7 @@
 - 🟩 make the themes work
 - 🟥 allow user to use markdown in todos
 - 🟩 ability to change background color to wallpaper
-=======
+
 - 🟥 make the themes work
 - 🟥 allow user to use markdown in todos
 - 🟥 ability to change background color to wallpaper
@@ -26,8 +26,6 @@
 - 🟥 extensions like `use markdown?` or `use textarea?`
 #### add themes
 - 🟩 catppuccin
-=======
-- 🟥 catppuccin
 - 🟥 dracula
 - 🟥 neon
 - 🟥 evaforest
