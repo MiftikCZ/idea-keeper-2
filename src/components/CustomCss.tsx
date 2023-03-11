@@ -9,12 +9,12 @@ export default function({}:any) {
     return <>
     <link rel="stylesheet" href={"./themes/" + config.theme + ".css"} />
       <style>
-        {config.customCss} :root {"{"}
+        {config.customCss || ""} :root {"{"}
         --hue: {config.hue};
         {"}"}
         {config.useBgImage == "true" ? `
         :root {
-          --background-overlay: ${config.bgOverlay};
+          ${config.bgOverlay ? `--background-overlay: ${config.bgOverlay};` : ""}
           --background: url("${config.bgImage}"); 
           --background-blend-mode: ${config.bgBlend};
         }
@@ -36,7 +36,8 @@ export default function({}:any) {
         `}
       </style>
       {config.addTheme.replace(/\ /gi, "").split(",").map((e:string) => {
-        return <link rel="stylesheet" href={"./themes/" + e + ".css"} />
+        if(e) return <link rel="stylesheet" href={"./themes/" + e + ".css"} />
+        else <></>
       })}
     </>
   }

@@ -11,7 +11,7 @@
 # todos
 #### global
 - 🟩 allow user to delete todos  
-- 🟥 add commands like `/lock` `/add last` `/delete last` `/print info` `/set userName booFooBar` ...
+- 🟥 add commands like `/lock` `/add last` `/delete last` ...
 - 🟩 custom css
 - 🟥 ability to choose english instead of czech language
 - 🟩 make the themes work
