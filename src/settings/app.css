@@ -45,6 +45,40 @@
     border-radius: 0.5em;
 }
 
+.main .wrap .button {
+    cursor: pointer;
+    border: none;
+    padding: 0.5em;
+    font-size: 0.9em;
+    background: hsl(var(--hue),80%,78%);
+    border-radius: 0.5em;
+    transition: 200ms;
+}
+
+
+.main .wrap .nofocus {
+    --clr: hsl(var(--hue),80%,78%);
+    cursor: pointer;
+    border: none;
+    padding: 0.5em;
+    font-size: 0.9em;
+    border: 1px var(--clr) solid;
+    color: var(--clr);
+    background: transparent;
+    border-radius: 0.5em;
+    transition: 200ms;
+}
+
+.main .wrap .button:hover {
+    background: hsl(var(--hue),80%,70%);
+}
+.main .wrap .nofocus:hover {
+    --clr: hsl(var(--hue),80%,70%);
+    color: var(--background);
+}
+
+
+
 .main .wrap .input {
     font-size: 0.9em;
     border: none;
@@ -75,4 +109,10 @@
 
 .main .wrap .input:focus, .main .wrap .area:focus {
     border-color: hsl(var(--hue),80%,83%);
+}
+
+.gridtwo {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 0.25em;
 }

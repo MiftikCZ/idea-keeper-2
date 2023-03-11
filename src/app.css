@@ -1,5 +1,7 @@
 :root {
-  --background: #202020;
+  --background: #212027;
+  --background-overlay: #212026;
+  --background-blend-mode: add;
   --topbar-bg: #0f0f12;
   --add-todo-bg: #0f0f12;
   --hue: 270;
@@ -13,10 +15,18 @@ body {
   color: var(--main-fg);
   margin: 0;
   padding: 0;
-  background: #212026;
+  /* background: #212026; */
   height: 100vh;
   max-height: 100vh;
   overflow: hidden;
+
+  background: var(--background) no-repeat center center fixed;
+  background-color: var(--background-overlay);
+  background-blend-mode: var(--background-blend-mode);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; 
 }
 
 a {
@@ -175,7 +185,7 @@ a {
 .todos {
   overflow: scroll;
   padding: 1.25em;
-  padding-bottom: 5em;
+  margin-bottom: 5em;
   width: 100%;
   display: flex;
   align-items: center;
@@ -185,6 +195,8 @@ a {
 }
 
 .todo {
+  border-radius: 0 0.25em 0.25em 0;
+  overflow: hidden;
   display: inline-flex;
   flex-direction: row;
   width: 100%;

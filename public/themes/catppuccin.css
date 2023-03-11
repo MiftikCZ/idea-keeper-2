@@ -1,0 +1,20 @@
+:root {
+    --background-overlay: #24273a;
+    --topbar-bg: #181926;
+    --add-todo-bg: #181926;
+    --main-fg: #cad3f5;
+    --gray-color: #6e738d;
+}
+.todo {
+    border-left-color: hsl(var(--hue), 66%, 69%);
+    background: #363a4f;
+}
+.todo .remove {
+    background: transparent;
+}
+.todo .remove:hover {
+    background: #ed879650;
+}
+.todo .remove:hover .icon {
+    color: #ed8796;
+}

@@ -1,14 +1,30 @@
+import { configD, getConfig } from "../lib/config"
+
 interface d {
     getConfig: Function | any,
 }
 
-export default function({getConfig}:d) {
+export default function({}:any) {
+  let config:configD = getConfig()
     return <>
+    <link rel="stylesheet" href={"./themes/" + config.theme + ".css"} />
       <style>
-        {getConfig().customCss} :root {"{"}
-        --hue: {getConfig().hue};
+        {config.customCss} :root {"{"}
+        --hue: {config.hue};
         {"}"}
-        {getConfig().useNeonText == "true" && `
+        {config.useBgImage == "true" ? `
+        :root {
+          --background-overlay: ${config.bgOverlay};
+          --background: url("${config.bgImage}"); 
+          --background-blend-mode: ${config.bgBlend};
+        }
+        ` : `
+        :root {
+          ${config.bgColor && `--background: ${config.bgColor};
+          --background-overlay: ${config.bgColor};`}
+        }
+        `}
+        {config.useNeonText == "true" && `
         .todo .body {
           background: linear-gradient(45deg,
             hsl(calc(var(--hue) - 40), 50%, 75%),
@@ -19,8 +35,7 @@ export default function({getConfig}:d) {
         }
         `}
       </style>
-      <link rel="stylesheet" href={"./themes/" + getConfig().theme + ".css"} />
-      {getConfig().addTheme.replace(/\ /gi, "").split(",").map((e:string) => {
+      {config.addTheme.replace(/\ /gi, "").split(",").map((e:string) => {
         return <link rel="stylesheet" href={"./themes/" + e + ".css"} />
       })}
     </>

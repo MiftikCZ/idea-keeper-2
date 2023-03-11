@@ -16,12 +16,46 @@ const onChangeTemplate = ({config, useInnerText,e,useChecked}: any) => {
         console.log("saved!")
     }
 }
+
+
+function getBase64(file:any,e:any,config:any) {
+    var reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = function () {
+        config[e[0]] = reader?.result?.toString()
+        setConfig(config)
+    };
+    reader.onerror = function (error) {
+        console.log('Error: ', error);
+    };
+}
+
+const fileChangeTemplate = ({config,e}:any) => {
+    return (f:any) => {
+        //@ts-ignore
+        // config[e[0]] = (f.files).toString()
+
+            let input = document.createElement('input');
+            input.type = 'file';
+            input.onchange = () => {
+                console.log("here!")
+                let file = input.files?.[0];
+                getBase64(file,e,config)
+            };
+            input.click();
+        
+
+        // setConfig(config)
+        // console.log("saved!")
+    }
+}
+
 function Choose({ config, e }: any) {
     return <>
         <select class="choose second" value={config[e[0]]} onChange={onChangeTemplate({config,e,useInnerText:false})}>
             {e[1][2].map((a:string) => {
                 return <option value={a} >{/*@ts-ignore*/ 
-                themesNames[a]}</option>
+                e[1][3][a]}</option>
             })}
         </select>
     </>
@@ -59,6 +93,20 @@ function Check({config,e}:any) {
     </>
 }
 
+function WriteImage({config,e}:any) {
+    return <div class="gridtwo">
+        <button class="button" onClick={fileChangeTemplate({config,e})}>Vybrat</button>
+        <button class="button nofocus" onClick={()=>{
+            let ms = prompt("Napiš celý odkaz na obrázek")
+            if(ms) {
+                config[e[0]] = ms
+                setConfig(config)
+            }
+        }}>Odkaz</button>
+    </div>
+}
+
+
 export function App() {
     let config: configD = getConfig()
     return (
@@ -80,6 +128,7 @@ export function App() {
                         : e[1][0] == "write_area" ? <WriteArea config={config} e={e} /> 
                         : e[1][0] == "write_number" ? <WriteNumber config={config} e={e} /> 
                         : e[1][0] == "write_range" ? <WriteRange config={config} e={e} setValue={setValue} value={value} /> 
+                        : e[1][0] == "write_image" ? <WriteImage config={config} e={e}/> 
                         : e[1][0] == "check" ? <Check config={config} e={e}/>
                         : ""}
                     </div>
