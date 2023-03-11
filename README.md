@@ -28,8 +28,8 @@
 - 🟩 catppuccin
 - 🟥 dracula
 - 🟥 neon
-- 🟥 evaforest
-- 🟥 nord
-- 🟥 gruvbox
+- 🟩 evaforest
+- 🟩 nord
+- 🟩 gruvbox
 - 🟥 light
 - 🟥 two color gradient
