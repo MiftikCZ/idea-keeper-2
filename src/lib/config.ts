@@ -8,7 +8,7 @@ export interface configD {
 
     bgColor?: string,
     useBgImage: string,
-
+    
     bgOverlay?: string,
     bgImage: string,
     bgBlend: string
@@ -26,14 +26,17 @@ export enum configDNames {
     useBgImage = "Obrázek na pozadí",
     bgImage = "Obrázek na pozadí",
     bgOverlay = "Barva překrytí",
-    bgBlend = "Filtr překrytí"
+    bgBlend = "Filtr překrytí",
 }
 
 
 export enum themesNames {
     basic = "Výchozí",
     catppuccin = "Catppuccin",
-    gruvbox = "Gruvbox"
+    gruvbox = "Gruvbox",
+    nord = "Nord",
+    evaforest = "Příroda",
+    transparent = "Průhledné"
 }
 
 
@@ -44,7 +47,7 @@ export enum bgOverlayNames {
 }
 
 export const configDArray = {
-    theme:["choose", "vyber",["basic", "catppuccin","gruvbox"], themesNames],
+    theme:["choose", "vyber",["basic", "catppuccin","gruvbox","nord","evaforest","transparent"], themesNames],
     user: ["write_string", "text"],
     customCss: ["write_area", "css"],
     addTheme: ["write_string", "napište názvy motivů, oddělujte čárkou"],
@@ -56,7 +59,7 @@ export const configDArray = {
     
     bgOverlay: ["write_string", "použij HEX barvu"],
     bgImage: ["write_image", "napiš celý odkaz"],
-    bgBlend: ["choose", "vyber", ["normal","multiply","overlay"], bgOverlayNames]
+    bgBlend: ["choose", "vyber", ["normal","multiply","overlay"], bgOverlayNames],
 }
 
 export const defaultConfig:configD = {
