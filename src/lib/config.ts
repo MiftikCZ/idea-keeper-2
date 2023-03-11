@@ -1,5 +1,5 @@
 export interface configD {
-    theme:"basic" | "catppuccin" | "neon",
+    theme: string,
     addTheme:string,
     customCss:string,
     user:string,
@@ -32,7 +32,8 @@ export enum configDNames {
 
 export enum themesNames {
     basic = "Výchozí",
-    catppuccin = "Catppuccin"
+    catppuccin = "Catppuccin",
+    gruvbox = "Gruvbox"
 }
 
 
@@ -43,7 +44,7 @@ export enum bgOverlayNames {
 }
 
 export const configDArray = {
-    theme:["choose", "vyber",["basic", "catppuccin"], themesNames],
+    theme:["choose", "vyber",["basic", "catppuccin","gruvbox"], themesNames],
     user: ["write_string", "text"],
     customCss: ["write_area", "css"],
     addTheme: ["write_string", "napište názvy motivů, oddělujte čárkou"],
