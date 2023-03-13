@@ -17,10 +17,8 @@
 - 🟩 make the themes work
 - 🟥 allow user to use markdown in todos
 - 🟩 ability to change background color to wallpaper
-- 🟥 make the themes work
-- 🟥 allow user to use markdown in todos
-- 🟥 ability to change background color to wallpaper
-- 🟥 ability to select from `transparent ui` and `normal ui`
+- 🟩 make the themes work
+- 🟩 ability to select from `transparent ui` and `normal ui`
 - 🟥 workspaces for todos, eg. type `/workspace set school` or `/workspace set superHidden`
 - 🟥 extensions like `use markdown?` or `use textarea?`
 #### add themes
