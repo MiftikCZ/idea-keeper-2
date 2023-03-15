@@ -4,6 +4,7 @@
     --add-todo-bg: #1e2326;
     --main-fg: #d3c6aa;
     --gray-color: #7a8478;
+    --link-color: #7fbbb3;
 }
 .todo {
     /* border-left-color: #a7c080; */
@@ -11,7 +12,7 @@
     background: #2e383c;
 }
 .todo .remove {
-    background: transparent;
+    background: #384b55;
 }
 .todo .remove:hover {
     background: #4c3743;

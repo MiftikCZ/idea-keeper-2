@@ -22,7 +22,8 @@ function getBase64(file:any,e:any,config:any) {
     var reader = new FileReader();
     reader.readAsDataURL(file);
     reader.onload = function () {
-        config[e[0]] = reader?.result?.toString()
+        let l = reader?.result?.toString()
+        config[e[0]] = l
         setConfig(config)
     };
     reader.onerror = function (error) {

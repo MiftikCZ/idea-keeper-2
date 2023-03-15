@@ -4,6 +4,7 @@
     --add-todo-bg: #2e3440;
     --main-fg: #d8dee9;
     --gray-color: #8fbcbb;
+    --link-color: #5e81ac;
 }
 .todo {
     border-left-color: hsl(var(--hue), 20%, 63%);

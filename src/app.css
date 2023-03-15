@@ -6,9 +6,11 @@
   --add-todo-bg: #0f0f12;
   --hue: 270;
   --main-fg: #bababf;
+  --link-color: rgb(72, 111, 190);
   --gray-color: #666;
   --todo-width: 750px;
   --add-todo-width: 600px;
+  --img-height: 150px;
 }
 
 body {
@@ -26,7 +28,7 @@ body {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover; 
+  background-size: cover;
 }
 
 a {
@@ -65,9 +67,11 @@ a {
 .topbar .second {
   cursor: pointer;
 }
+
 .topbar .first {
   position: relative;
 }
+
 .topbar .first .select {
   margin-right: 0.15em;
   background: hsl(var(--hue), 53%, 63%);
@@ -212,6 +216,28 @@ a {
   padding: 0.7em;
 }
 
+
+.todo .body .img_list {
+  display: flex;
+  gap: 0.5em;
+  flex-direction: row;
+  padding: 0.25em;
+}
+
+.todo .body .img_list img {
+  height: var(--img-height);
+}
+
+.todo .body .img_wrap summary {
+  user-select: none;
+  color: var(--gray-color);
+}
+
+.todo .body .link {
+  text-decoration: underline;
+  color: var(--link-color);
+}
+
 .todo .remove {
   /* height: 100%; */
   justify-content: center;
@@ -236,4 +262,8 @@ a {
 .todo .remove:hover {
 
   background: #853333ee;
+}
+
+.todoLinkImage {
+  vertical-align: middle;
 }
