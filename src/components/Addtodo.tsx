@@ -6,7 +6,7 @@ interface mainD {
     settodos: Function | any
 }
 
-interface todoInDb {
+export interface todoInterface {
     time: string,
     id: string,
     content: string,    
@@ -19,7 +19,7 @@ export default function({callbackChange,todos,settodos}: mainD) {
         let v = document.getElementById("addtodoInput").value
         if(v) {
             let id = Date.now().toString()
-            let args:todoInDb = {
+            let args:todoInterface = {
                 time: id,
                 id: id,
                 content: v,
