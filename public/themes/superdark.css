@@ -1,0 +1,32 @@
+:root {
+    --background-overlay: #121316;
+    --topbar-bg: #121316;
+    --add-todo-bg: #121316;
+    --main-fg: #eee;
+    --gray-color: #807f88;
+    --link-color: hsl(190,37%,48%);
+}
+
+#app .todos {
+    align-items: start;
+}
+
+.todo {
+    max-width: unset;
+    /* border-left-color: hsl(var(--hue), 89%, 78%); */
+    background: #0f0f1200;
+    border-left-color: #ff5555;
+}
+.todo .remove {
+    background: transparent;
+    border-left: #ff555550 3px solid;
+}
+
+.todo .remove:hover .icon {
+    color: #ff5555;
+}
+
+.addtodo {
+    border-top: hsla(var(--hue), 37%,42%,25%) 2px solid;
+    border-radius: unset;
+}

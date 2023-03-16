@@ -23,7 +23,7 @@
 - 🟥 extensions like `use markdown?` or `use textarea?`
 #### add themes
 - 🟩 catppuccin
-- 🟥 dracula
+- 🟩 dracula
 - 🟥 neon
 - 🟩 evaforest
 - 🟩 nord
