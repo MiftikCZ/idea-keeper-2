@@ -1,7 +1,7 @@
-import { useRef } from "preact/hooks"
+import { useRef, useState } from "preact/hooks"
+import Commands from "./Commands"
 
 interface mainD {
-    callbackChange?: Function | any,
     todos: Array<any>,
     settodos: Function | any
 }
@@ -13,16 +13,17 @@ export interface todoInterface {
     additional?: Object,
 }
 
-export default function({callbackChange,todos,settodos}: mainD) {
+export default function({todos,settodos}: mainD) {
+    let [input, setInput] = useState<string>("")
     function addTodo() {
         //@ts-ignore
-        let v = document.getElementById("addtodoInput").value
-        if(v) {
+        // let v = document.getElementById("addtodoInput").value
+        if(input) {
             let id = Date.now().toString()
             let args:todoInterface = {
                 time: id,
                 id: id,
-                content: v,
+                content: input,
                 additional: {},
             }
             settodos([...todos,args])
@@ -33,11 +34,16 @@ export default function({callbackChange,todos,settodos}: mainD) {
         }
     }
 
+    function callbackChange(e:any) {
+        setInput(e.target.value)
+    }
+
     return <div class="addtodo">
     <button class="button" onClick={addTodo}>  
         <span class="material-symbols-outlined icon">add</span>
     </button>
     <div class="wrap">
+        <Commands input={input}/>
         <input id="addtodoInput" type="text" placeholder="napiš svůj nápad..." onInput={callbackChange} class="input"/>
     </div>
     </div>
