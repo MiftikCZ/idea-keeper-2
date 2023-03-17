@@ -268,3 +268,71 @@ a {
 .todoLinkImage {
   vertical-align: middle;
 }
+
+.addtodo .commands {
+  background: var(--add-todo-bg);
+  border-radius: 3px;
+  box-shadow: var(--add-todo-bg) 0 2px 4px;
+  border: var(--add-todo-bg) 1px solid;
+  bottom: 4em;
+  position: absolute;
+  max-height: 12em;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  max-width: var(--add-todo-width);
+  width: 100%;
+  padding: 0.25em;
+}
+
+.addtodo .commands .list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1em;
+}
+
+.addtodo .commands .command {
+  background: #222;
+  padding: 0.3em;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 100ms;
+}
+
+.addtodo .commands .command:hover {
+  /* color: var(--link-color); */
+  background: var(--gray-color);
+  color: var(--add-todo-bg);
+}
+
+.addtodo .commands .command .focus {
+  text-decoration: underline;
+}
+
+
+/* COMPONENTS */
+
+.lock {
+  /* background: linear-gradient(45deg, #6495ed20, #5f9ea020); */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25em;
+}
+
+.lock .title {
+  text-shadow: #0008 2px 2px 2px;
+  color: hsl(var(--hue), 70%,70%);
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.lock .description {
+  color: #eee;
+}

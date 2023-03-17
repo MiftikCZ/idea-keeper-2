@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'preact/hooks'
+import { JSX } from 'preact/jsx-runtime'
 import './app.css'
 import Addtodo from './components/Addtodo'
 import CustomCss from './components/CustomCss'
@@ -16,16 +17,20 @@ export function App() {
   }
   let [todos, setTodos] = useState<Array<any>>(JSON.parse(_todos_db || "[]") || [])
   if (!todos) setTodos([])
+  let [addFromCommand,setAddFromCommand] = useState<JSX.Element>(<></>)
 
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos))
   }, [todos])
   return (
     <>
-      <CustomCss getConfig={getConfig}/>
-      <Topbar isInSettings={false} howmuch={todos.length} />
-      <ListTodos todos={todos} settodos={setTodos} />
-      <Addtodo todos={todos} settodos={setTodos} />
+      <span id="appWrapper">
+        <CustomCss getConfig={getConfig}/>
+        <Topbar isInSettings={false} howmuch={todos.length} />
+        <ListTodos todos={todos} settodos={setTodos} />
+        <Addtodo todos={todos} settodos={setTodos} addFromCommand={addFromCommand} setAddFromCommand={setAddFromCommand} />
+      </span>
+      <span id="commandWrapper"><span id="commandContainer">{addFromCommand||<></>}</span></span>
     </>
   )
 }

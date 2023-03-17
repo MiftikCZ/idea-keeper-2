@@ -3,12 +3,14 @@ export interface configD {
     addTheme:string,
     customCss:string,
     user:string,
-    useNeonText:string
     hue:number,
 
+    useNeonText:string,
+    useCommands:string,
+    showDateInTodos: string, 
     bgColor?: string,
     useBgImage: string,
-    
+
     bgOverlay?: string,
     bgImage: string,
     bgBlend: string
@@ -19,11 +21,14 @@ export enum configDNames {
     user = "Jméno",
     customCss = "Vlastní CSS",
     addTheme = "Další styly",
-    useNeonText = "Neonový text",
     hue = "Odstín",
 
-    bgColor = "Pozadí",
+    useNeonText = "Neonový text",
+    useCommands = "Příkazy",
     useBgImage = "Obrázek na pozadí",
+    showDateInTodos = "Zobrazit datum",
+
+    bgColor = "Pozadí",
     bgImage = "Obrázek na pozadí",
     bgOverlay = "Barva překrytí",
     bgBlend = "Filtr překrytí",
@@ -52,13 +57,15 @@ export const configDArray = {
     theme:["choose", "vyber",["basic","superdark", "catppuccin","gruvbox","dracula","nord","evaforest","transparent"], themesNames],
     user: ["write_string", "text"],
     customCss: ["write_area", "css"],
-    addTheme: ["write_string", "napište názvy motivů, oddělujte čárkou"],
+    addTheme: ["write_string", "Názvy dalších, oddělujte čárkou"],
+    useCommands: ["check"],
+    showDateInTodos: ["check"],
     useNeonText: ["check"], 
     hue: ["write_range", "0-360"],
 
     bgColor: ["write_string", "použij HEX barvu"],
     useBgImage: ["check"],
-    
+
     bgOverlay: ["write_string", "použij HEX barvu"],
     bgImage: ["write_image", "napiš celý odkaz"],
     bgBlend: ["choose", "vyber", ["normal","multiply","overlay"], bgOverlayNames],
@@ -69,8 +76,10 @@ export const defaultConfig:configD = {
     addTheme: "[]",
     customCss: "",
     user: "Kubík",
-    useNeonText: "false",
     hue: 120,
+    useNeonText: "false",
+    useCommands: "false",
+    showDateInTodos: "false",
 
     useBgImage: "false",
     bgImage: "https://miftikcz.github.io/griddy-startpage/assets/wal1.jpg",
