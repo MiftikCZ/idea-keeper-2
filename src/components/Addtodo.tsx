@@ -22,9 +22,11 @@ export default function ({ todos, settodos, addFromCommand, setAddFromCommand }:
     let [input, setInput] = useState<string>("")
     function addTodo() {
         if (input) {
-            let cmd = runMaybeCommand(input,setAddFromCommand)
-            if(cmd.status) {
-                return setAddFromCommand(cmd.content)
+            if(config.useCommands == "true") {
+                let cmd = runMaybeCommand(input,setAddFromCommand)
+                if(cmd.status) {
+                    return setAddFromCommand(cmd.content)
+                }
             }
             let id = Date.now().toString()
             let args: todoInterface = {
