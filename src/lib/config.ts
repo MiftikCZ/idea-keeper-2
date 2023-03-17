@@ -73,9 +73,9 @@ export const configDArray = {
 
 export const defaultConfig:configD = {
     theme: "basic",
-    addTheme: "[]",
+    addTheme: "",
     customCss: "",
-    user: "Kubík",
+    user: "Vrabčák",
     hue: 120,
     useNeonText: "false",
     useCommands: "false",
