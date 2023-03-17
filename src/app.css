@@ -343,9 +343,9 @@ a {
 
 code {
   background-color: #333;
-  border-radius: 3px;
+  border-radius: 0.18em;
   font-family: monospace;
-  padding: 0 3px;
+  padding: 0 0.18em;
 }
 
 .todo .body .dolu {
@@ -357,4 +357,32 @@ code {
 .todo .body .dolu .datum {
   font-style: italic;
   flex-shrink: 0;
+}
+
+.command_container {
+  padding: 0.5em;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+  background: #0f0f12;
+  border-radius: 0.25em;
+  box-shadow: #0f0f12 0px 3px 4px;
+}
+
+.command_container .tlacitka {
+  display: flex;
+  flex-direction: row;
+  gap: 0.25em;
+  padding: 0.25em;
+}
+
+.command_container .tlacitka .done {
+  border: none;
+  border-radius: 0.25em;
+  padding: 0.5em;
+  background: hsl(var(--hue),50%,52%);
+  
 }

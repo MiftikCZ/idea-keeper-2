@@ -18,12 +18,36 @@ export interface todoInterface {
     additional?: Object,
 }
 
+interface saveTodoInterface {
+    content:string,
+    additional?: Object
+}
+
+interface todosInterface {
+    todos: Array<todoInterface>,
+    settodos: Function | any
+}
+
+export function saveTodo({content,additional}:saveTodoInterface, {todos,settodos}:todosInterface) {
+    let id = Date.now().toString()
+    let args: todoInterface = {
+        time: id,
+        id: id,
+        content: content,
+        additional: additional,
+    }
+    settodos([...todos, args])
+    
+    todos = [...todos, args]
+    localStorage.setItem("todos", JSON.stringify(todos || []))
+}
+
 export default function ({ todos, settodos, addFromCommand, setAddFromCommand }: mainD) {
     let [input, setInput] = useState<string>("")
     function addTodo() {
         if (input) {
             if(config.useCommands == "true") {
-                let cmd = runMaybeCommand(input,setAddFromCommand)
+                let cmd = runMaybeCommand(input,setAddFromCommand,{settodos,todos})
                 if(cmd.status) {
                     return setAddFromCommand(cmd.content)
                 }
