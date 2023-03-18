@@ -38,24 +38,22 @@ function Dole({ after, time }: any) {
 function preprocessTodoContent(str: string, time: string) {
     let after: (JSX.Element | undefined) = undefined
     let imageI = 0
+    let text = str.split(" ").map(e => {
+        if (e.startsWith("https://") || e.startsWith("http://")) {
+            return `<a href=${e} class="link" target="_blank">${e}</a>`
+        } else if ((e.startsWith("![https://") || e.startsWith("![http://")) && e.endsWith("]")) {
+            let link = e.replace(/\!\[/g, "").replace(/\]/g, "")
+            after = <>{after}<img src={link} height="50" /></>
+            imageI++
+            return `<a href=${link} class="link" target="_blank">obrázek ${imageI}</a>`
+        }
+        return e
+    }).join(" ").replace(/\`(.*?)\`/g, "\<code\>$1<\/code\>")
+    .replace(/\*\*(.*?)\*\*/g, "\<b\>$1<\/b\>")
+    .replace(/\*(.*?)\*/g, "\<i\>$1 <\/i\>")
+    .replace(/\_(.*?)\_/g, "\<u\>$1<\/u\>")
     return <>
-        <span class="text">
-            {
-                str.split(" ").map(e => {
-                    if (e.startsWith("`") && e.endsWith("`")) {
-                        return <><code>{e.replace(/\`/g, "")}</code> </>
-                    } if (e.startsWith("https://") || e.startsWith("http://")) {
-                        return <><a href={e} class="link" target="_blank">{e}</a> </>
-                    } else if ((e.startsWith("![https://") || e.startsWith("![http://")) && e.endsWith("]")) {
-                        let link = e.replace(/\!\[/g, "").replace(/\]/g, "")
-                        after = <>{after}<img src={link} height="50" /></>
-                        imageI++
-                        return <><a href={link} class="link" target="_blank">obrázek {imageI}</a> </>
-                    }
-                    return <>{e} </>
-                })
-            }
-        </span>
+        <span class="text" dangerouslySetInnerHTML={{__html:text}}/>
 
         <Dole after={after} time={time} />
     </>
