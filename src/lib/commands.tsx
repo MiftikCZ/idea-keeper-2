@@ -1,8 +1,5 @@
-import { render } from "preact"
-import { useState } from "preact/hooks"
 import { JSX } from "preact/jsx-runtime"
 import { todoInterface } from "../components/Addtodo"
-import CommandContainer from "../components/CommandContainer"
 import Lock from "../components/Lock"
 import SaveImages from "../components/SaveImages"
 
@@ -12,9 +9,6 @@ export const commands = {
     }, 
     "saveimgs": (setAddFromCommand:Function|any,{todos,settodos}:todosInterface) => {
         return <SaveImages setAddFromCommand={setAddFromCommand} todos={todos} settodos={settodos}/>
-    },
-    "reload": () => {
-
     }
 }
 
