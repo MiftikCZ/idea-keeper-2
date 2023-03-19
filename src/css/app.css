@@ -43,10 +43,6 @@ a {
   overflow: auto;
 }
 
-#appWrapper {
-  transition: 200ms filter;
-}
-
 .icon {
   vertical-align: middle;
 }
