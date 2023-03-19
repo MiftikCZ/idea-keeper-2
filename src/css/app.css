@@ -43,6 +43,10 @@ a {
   overflow: auto;
 }
 
+#appWrapper {
+  transition: 200ms filter;
+}
+
 .icon {
   vertical-align: middle;
 }
@@ -187,7 +191,8 @@ a {
 }
 
 .todos {
-  overflow: scroll;
+  overflow-y: auto;
+  overflow-x: auto;
   padding: 1.25em;
   margin-bottom: 5em;
   width: 100%;
@@ -332,7 +337,7 @@ a {
 
 .lock .title {
   text-shadow: #0008 2px 2px 2px;
-  color: hsl(var(--hue), 70%,70%);
+  color: hsl(var(--hue), 70%, 70%);
   font-size: 1.5em;
   font-weight: bold;
 }
@@ -351,7 +356,8 @@ code {
 .todo .body .dolu {
   display: flex;
   color: var(--gray-color);
-  flex-direction: row; gap: 0.25em;
+  flex-direction: row;
+  gap: 0.25em;
 }
 
 .todo .body .dolu .datum {
@@ -366,7 +372,7 @@ code {
   flex-direction: column;
   top: 50%;
   left: 50%;
-  transform:translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   background: #0f0f12;
   border-radius: 0.25em;
   box-shadow: #0f0f12 0px 3px 4px;
@@ -383,6 +389,6 @@ code {
   border: none;
   border-radius: 0.25em;
   padding: 0.5em;
-  background: hsl(var(--hue),50%,52%);
-  
+  background: hsl(var(--hue), 50%, 52%);
+
 }

@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'preact/hooks'
 import { JSX } from 'preact/jsx-runtime'
-import './app.css'
+import './css/dist/app.css'
 import Addtodo from './components/Addtodo'
 import CustomCss from './components/CustomCss'
 import ListTodos from './components/ListTodos'

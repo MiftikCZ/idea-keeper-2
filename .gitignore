@@ -12,6 +12,7 @@ dist-ssr
 *.local
 
 build.sh
+parseCss.sh
 
 # Editor directories and files
 .vscode/*
