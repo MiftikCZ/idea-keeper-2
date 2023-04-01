@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'preact/hooks'
+import { useEffect, useState } from 'preact/hooks'
 import { JSX } from 'preact/jsx-runtime'
 import './css/dist/app.css'
 import Addtodo from './components/Addtodo'

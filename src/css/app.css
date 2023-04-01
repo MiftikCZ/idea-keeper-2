@@ -108,6 +108,7 @@ a {
 }
 
 .addtodo {
+  --addtodo-color: hsl(var(--hue), 37%, 42%);
   max-width: var(--add-todo-width);
   border-radius: .75em .75em 0 0;
   padding: 0.75em;
@@ -126,7 +127,7 @@ a {
 .addtodo .button {
   height: 100%;
   padding: 0.75em;
-  background: hsl(var(--hue), 37%, 42%);
+  background: var(--addtodo-color);
   border: none;
   border-radius: 1em;
   color: var(--main-fg);
@@ -179,7 +180,7 @@ a {
 }
 
 .addtodo .input:focus {
-  border-bottom-color: hsl(var(--hue), 37%, 42%);
+  border-bottom-color: var(--addtodo-color);
 }
 
 .addtodo .button:hover .icon {
