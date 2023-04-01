@@ -43,7 +43,8 @@ export enum themesNames {
     evaforest = "Příroda",
     transparent = "Průhledné",
     dracula = "Dracula",
-    superdark = "Super Tmavý"
+    superdark = "Super Tmavý",
+    catppuccin_mocha = "Mocha mauve"
 }
 
 
@@ -54,7 +55,7 @@ export enum bgOverlayNames {
 }
 
 export const configDArray = {
-    theme:["choose", "vyber",["basic","superdark", "catppuccin","gruvbox","dracula","nord","evaforest","transparent"], themesNames],
+    theme:["choose", "vyber",["basic","superdark", "catppuccin", "catppuccin_mocha","gruvbox","dracula","nord","evaforest","transparent"], themesNames],
     user: ["write_string", "text"],
     customCss: ["write_area", "css"],
     addTheme: ["write_string", "Názvy dalších, oddělujte čárkou"],

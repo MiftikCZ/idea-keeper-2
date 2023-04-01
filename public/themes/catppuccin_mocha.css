@@ -1,0 +1,41 @@
+:root {
+    --background-overlay: #1e1e2e;
+    --topbar-bg: #181825;
+    --add-todo-bg: #181825;
+    --main-fg: #cdd6f4;
+    --gray-color: #6c7086;
+    --link-color: #89b4fa;
+    --main-color: #fab387;
+}
+.todo {
+    border-left-color: var(--main-color);
+    background: #313244;
+}
+.todo .body {
+    color: var(--main-fg);
+}
+.todo .remove {
+    background: #45475a;
+    border-left: #6c7086 3px solid;
+}
+.todo .remove:hover {
+    background: #f38ba850;
+    border-left-color: #f38ba8;
+}
+.todo .remove:hover .icon {
+    color: #f38ba8;
+}
+
+.topbar .first .select {
+  background: var(--main-color);
+}
+
+code {
+    /* background: #45475a; */
+    background: #a6adc8;
+    color: #11111b;
+}
+
+.addtodo {
+  --addtodo-color: #6c7086;
+}

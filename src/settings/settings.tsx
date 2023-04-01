@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'preact/hooks'
-import '../css/dist/app.css'
 import "../css/dist/settings.css"
+import '../css/dist/app.css'
 import Topbar from '../components/Topbar'
 import { getConfig, configD, configDArray, setConfig, configDNames, themesNames } from '../lib/config'
 
