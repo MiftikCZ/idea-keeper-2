@@ -1,4 +1,4 @@
-# Idea Keeper 2 `beta`
+# Idea Keeper 2
 - Clean customizable todo app for keeping ideas - **vytvořeno pro čechy** 🇨🇿
 - Ability to change themes, customize css, use commands and save image links and much more!
 - Remake of [Idea Keeper](https://github.com/MiftikCZ/idea-keeper) build from absolute 0 with [preact](https://preactjs.com)
