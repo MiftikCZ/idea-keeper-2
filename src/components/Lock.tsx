@@ -23,7 +23,7 @@ export default function({setAddFromCommand}:mainD) {
         setAddFromCommand(<></>)
     }}>
         <div class="title">{getConfig().user}</div>
-        <div class="description">Zdravím, {time}</div> 
+        <div class="description">Hello, The time is {time}</div> 
     </div>
     </>
 }

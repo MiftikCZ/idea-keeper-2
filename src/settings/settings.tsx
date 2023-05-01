@@ -13,7 +13,7 @@ const onChangeTemplate = ({ config, useInnerText, e, useChecked }: any) => {
         //@ts-ignore
         config[e[0]] = (useInnerText ? f.target.innerText : useChecked ? f.target.checked : f.target.value).toString()
         setConfig(config)
-        console.log("saved!")
+        console.log("🎉 saved!")
     }
 }
 
@@ -89,14 +89,14 @@ function Check({ config, e }: any) {
 
 function WriteImage({ config, e }: any) {
     return <div class="gridtwo">
-        <button class="button" onClick={fileChangeTemplate({ config, e })}>Vybrat</button>
+        <button class="button" onClick={fileChangeTemplate({ config, e })}>Choose</button>
         <button class="button nofocus" onClick={() => {
-            let ms = prompt("Napiš celý odkaz na obrázek")
+            let ms = prompt("Write full link to image")
             if (ms) {
                 config[e[0]] = ms
                 setConfig(config)
             }
-        }}>Odkaz</button>
+        }}>Link</button>
     </div>
 }
 

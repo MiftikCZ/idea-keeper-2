@@ -12,12 +12,12 @@ export default function ({ howmuch, isInSettings }: mainD) {
         }>
             {howmuch > 0.1 ? <>
                 <span class="select">{howmuch.toLocaleString()}</span> {
-                    howmuch == 1 ? "nápad" :
-                        howmuch < 5 ? "nápady" : "nápadů"
+                    howmuch == 1 ? "idea" :
+                        howmuch < 5 ? "ideas" : "ideas"
                 }
             </> : <>
                 {isInSettings ? <>
-                <span class="settings">Nastavení</span>
+                <span class="settings">Settings</span>
                 </> : <>
                 Idea Keeper <span class="version">2</span>
                 </>}

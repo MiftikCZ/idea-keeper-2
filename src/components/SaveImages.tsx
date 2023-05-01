@@ -9,8 +9,8 @@ interface mainD {
 export default function ({setAddFromCommand,todos,settodos}:mainD) {
     let [input, setInput] = useState("")
     return <CommandContainer>
-        <h1>Ulož fotky pomocí odkazů</h1>
-        <textarea cols={30} rows={10} onInput={(e:any) => { setInput(e?.target?.value) }} placeholder="odděluj novým řádkem"></textarea>
+        <h1>Save photos with links</h1>
+        <textarea cols={30} rows={10} onInput={(e:any) => { setInput(e?.target?.value) }} placeholder="split with new line"></textarea>
         <div class="tlacitka">
         <button class="done" onClick={()=>{
             saveTodo({
@@ -18,10 +18,10 @@ export default function ({setAddFromCommand,todos,settodos}:mainD) {
             },{todos,
             settodos})
             setAddFromCommand(<></>)
-        }}>Hotovo</button>
-        <button class="close" onClick={()=>{
+        }}>Done</button>
+        <button class="close material-symbols-outlined" onClick={()=>{
             setAddFromCommand(<></>)
-        }}>Zavřít</button>
+        }}>close</button>
         </div>
     </CommandContainer>
 }

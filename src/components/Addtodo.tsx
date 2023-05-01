@@ -80,7 +80,7 @@ export default function ({ todos, settodos, addFromCommand, setAddFromCommand }:
                 <span class="material-symbols-outlined icon">add</span>
             </button>
             <div class="wrap">
-                <input id="addtodoInput" type="text" placeholder="napiš svůj nápad..." onInput={callbackChange} class="input" />
+                <input id="addtodoInput" type="text" placeholder="what's on your mind?" onInput={callbackChange} class="input" />
             </div>
         </div>
     </>

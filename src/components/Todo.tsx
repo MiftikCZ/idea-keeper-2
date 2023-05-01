@@ -13,16 +13,16 @@ function Dole({ after, time }: any) {
     function Main() {
         if (getConfig().showDateInTodos == "true") {
             let agoTime = Math.floor((Date.now() - parseInt(time)) / 1000 / 60 / 60 / 24)
-            let ago = agoTime ? <span class="datum">{agoTime} dny</span> : <></>
+            let ago = agoTime ? <span class="datum">{agoTime} days</span> : <></>
             return after ? <> <details class="img_wrap">
-                <summary>příloha</summary>
+                <summary>images</summary>
                 <span class="img_list">
                     {after}
                 </span>
             </details> {ago} </> : <><div class="img_wrap"></div>{ago}</>
         } else {
             return after && <details class="img_wrap">
-                <summary>příloha</summary>
+                <summary>images</summary>
                 <span class="img_list">
                     {after}
                 </span>
@@ -45,7 +45,7 @@ function preprocessTodoContent(str: string, time: string) {
             let link = e.replace(/\!\[/g, "").replace(/\]/g, "")
             after = <>{after}<img src={link} height="50" /></>
             imageI++
-            return `<a href=${link} class="link" target="_blank">obrázek ${imageI}</a>`
+            return `<a href=${link} class="link" target="_blank">image ${imageI}</a>`
         }
         return e
     }).join(" ").replace(/\`(.*?)\`/g, "\<code\>$1<\/code\>")

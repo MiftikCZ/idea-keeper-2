@@ -17,58 +17,58 @@ export interface configD {
 }
 
 export enum configDNames {
-    theme = "Motiv",
-    user = "Jméno",
-    customCss = "Vlastní CSS",
-    addTheme = "Další styly",
-    hue = "Odstín",
+    theme = "Theme",
+    user = "Name",
+    customCss = "Custom CSS",
+    addTheme = "Additional styles",
+    hue = "Theme hue",
 
-    useNeonText = "Neonový text",
-    useCommands = "Příkazy",
-    useBgImage = "Obrázek na pozadí",
-    showDateInTodos = "Zobrazit datum",
+    useNeonText = "Neon text",
+    useCommands = "Commands",
+    useBgImage = "Use wallpaper",
+    showDateInTodos = "Show date",
 
-    bgColor = "Pozadí",
-    bgImage = "Obrázek na pozadí",
-    bgOverlay = "Barva překrytí",
-    bgBlend = "Filtr překrytí",
+    bgColor = "Background",
+    bgImage = "Background image",
+    bgOverlay = "Overlay color",
+    bgBlend = "Overlay filter",
 }
 
 
 export enum themesNames {
-    basic = "Výchozí",
+    basic = "Default",
     catppuccin = "Catppuccin",
     gruvbox = "Gruvbox",
     nord = "Nord",
-    evaforest = "Příroda",
-    transparent = "Průhledné",
+    evaforest = "Everforest",
+    transparent = "Transparent",
     dracula = "Dracula",
-    superdark = "Super Tmavý",
+    superdark = "Super dark",
     catppuccin_mocha = "Mocha mauve"
 }
 
 
 export enum bgOverlayNames {
-    multiply = "vynásobit",
-    overlay = "přidat",
-    normal = "žádný filtr"
+    multiply = "multiply",
+    overlay = "add",
+    normal = "no filter"
 }
 
 export const configDArray = {
     theme:["choose", "vyber",["basic","superdark", "catppuccin", "catppuccin_mocha","gruvbox","dracula","nord","evaforest","transparent"], themesNames],
     user: ["write_string", "text"],
     customCss: ["write_area", "css"],
-    addTheme: ["write_string", "Názvy dalších, oddělujte čárkou"],
+    addTheme: ["write_string", "eg: catppuccin, transparent"],
     useCommands: ["check"],
     showDateInTodos: ["check"],
     useNeonText: ["check"], 
     hue: ["write_range", "0-360"],
 
-    bgColor: ["write_string", "použij HEX barvu"],
+    bgColor: ["write_string", "HEX color"],
     useBgImage: ["check"],
 
-    bgOverlay: ["write_string", "použij HEX barvu"],
-    bgImage: ["write_image", "napiš celý odkaz"],
+    bgOverlay: ["write_string", "HEX color"],
+    bgImage: ["write_image", "full link"],
     bgBlend: ["choose", "vyber", ["normal","multiply","overlay"], bgOverlayNames],
 }
 
@@ -76,7 +76,7 @@ export const defaultConfig:configD = {
     theme: "basic",
     addTheme: "",
     customCss: "",
-    user: "Vrabčák",
+    user: "Tučňák 🐧",
     hue: 120,
     useNeonText: "false",
     useCommands: "false",

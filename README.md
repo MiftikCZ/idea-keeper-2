@@ -1,5 +1,5 @@
 # Idea Keeper 2
-- 🪴 Clean customizable app for keeping ideas - **vytvořeno pro čechy** 🇨🇿
+- 🪴 Clean customizable app for keeping ideas - **now in english!**
 - 🎨 Ability to change themes, customize css, use commands and save image links and much more!
 - 🧼 Remake of [Idea Keeper](https://github.com/MiftikCZ/idea-keeper) build from absolute 0 with [preact](https://preactjs.com)
 
@@ -10,7 +10,7 @@
 - [x] allow user to delete todos  
 - [ ] add commands like `/lock` `/add last` `/delete last` ...
 - [x] custom css
-- [ ] ability to choose english instead of czech language
+- [x] ability to choose english instead of czech language (now there is only english)
 - [x] make the themes work
 - [ ] allow user to use markdown in todos
 - [x] ability to change background color to wallpaper
