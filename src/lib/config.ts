@@ -83,7 +83,8 @@ export const defaultConfig:configD = {
     showDateInTodos: "false",
 
     useBgImage: "false",
-    bgImage: "https://miftikcz.github.io/griddy-startpage/assets/wal1.jpg",
+    // author: Vitalii Khodzinskyi, not sure if it has copyright
+    bgImage: "https://images.unsplash.com/photo-1675849324506-b64b8b2a92b2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
     bgBlend: "multiply",
 }
 
