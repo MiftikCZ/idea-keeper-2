@@ -73,7 +73,7 @@ export const configDArray = {
 }
 
 export const defaultConfig:configD = {
-    theme: "basic",
+    theme: "transparent",
     addTheme: "",
     customCss: "",
     user: "Tučňák 🐧",
@@ -82,7 +82,8 @@ export const defaultConfig:configD = {
     useCommands: "false",
     showDateInTodos: "false",
 
-    useBgImage: "false",
+    useBgImage: "true",
+    bgOverlay: "#888",
     // author: Vitalii Khodzinskyi, not sure if it has copyright
     bgImage: "https://images.unsplash.com/photo-1675849324506-b64b8b2a92b2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
     bgBlend: "multiply",

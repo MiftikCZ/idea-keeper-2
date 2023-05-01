@@ -1,4 +1,4 @@
-import{p as c,o as e,d as i,g as d,h as v,T as y,q as k}from"./index-7b3e2705.js";function I({setAddFromCommand:t}){let[n,r]=c("...");function s(){let l=new Date;r(l.getHours()+":"+l.getMinutes())}let a=setInterval(()=>s,1e3);return s(),e(i,{children:[e("style",{children:`
+import{p as c,o as e,d as i,g as d,h as v,T as y,q as k}from"./index-bf25b342.js";function I({setAddFromCommand:t}){let[n,r]=c("...");function s(){let l=new Date;r(l.getHours()+":"+l.getMinutes())}let a=setInterval(()=>s,1e3);return s(),e(i,{children:[e("style",{children:`
         #appWrapper {
             filter: blur(10px);
         }
