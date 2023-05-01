@@ -3,7 +3,9 @@
 - 🎨 Ability to change themes, customize css, use commands and save image links and much more!
 - 🧼 Remake of [Idea Keeper](https://github.com/MiftikCZ/idea-keeper) build from absolute 0 with [preact](https://preactjs.com)
 
-![Snímek obrazovky_2023-03-10_17-13-12](https://user-images.githubusercontent.com/89579269/224366773-da844463-1e96-410f-ad19-2885b871d8ca.png)
+![image](https://user-images.githubusercontent.com/89579269/235452362-b5412f2e-602b-439f-8157-2f03d1f352dc.png)
+![image](https://user-images.githubusercontent.com/89579269/235452098-6a6f93fd-764f-472f-a825-f807503bd40f.png)
+
 
 # Todos
 #### Functions
