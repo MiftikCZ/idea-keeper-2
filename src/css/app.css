@@ -372,20 +372,40 @@ code {
   transform: translate(-50%, -50%);
   background: #0f0f12;
   border-radius: 0.25em;
-  box-shadow: #0f0f12 0px 3px 4px;
+  box-shadow: #0f0f12 0 5px 15px;
 }
 
 .command_container .tlacitka {
   display: flex;
   flex-direction: row;
   gap: 0.25em;
-  padding: 0.25em;
+  padding: 0.5em 0.25em;
+  width: 100%;
+  transition: 200ms;
 }
 
 .command_container .tlacitka .done {
+  cursor: pointer;
   border: none;
-  border-radius: 0.25em;
+  border-radius: 1.5em; 
   padding: 0.5em;
-  background: hsl(var(--hue), 50%, 52%);
+  color: hsl(var(--hue), 50%, 80%);
+  font-size: 0.9em;
+  background: hsl(var(--hue), 50%, 30%);
+  width: 100%;
+}
 
+
+
+.command_container .tlacitka .close {
+  cursor: pointer;
+  flex-shrink: 0;
+  font-size: 0.9em;
+  border: none;
+  border-radius: 50%; 
+  padding: 0em 0.75em;
+  aspect-ratio:  1 / 1;
+  background: hsl(var(--hue), 50%, 52%, 20%);
+  color: hsl(var(--hue), 50%, 60%);
+  width: fit-content;
 }
