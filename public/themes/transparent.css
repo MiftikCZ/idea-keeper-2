@@ -7,17 +7,18 @@
 .todo {
     border-left-color: hsl(var(--hue), 34%, 54%);
     background: #101010aa;
-    box-shadow: #8882 0px 4px 4px;
+    box-shadow: #8881 0px 2px 2px;
 }
 .topbar .first .select {
     color: #0f121680;
 }
 .todo .remove {
+    border-radius: 0.3em;
     background: transparent;
 }
 .todo .remove:hover {
-    background: #cc241d88;
+    background: hsla(2, 75%, 25%);
 }
 .todo .remove:hover .icon {
-    color: #fb4934;
+    color: hsl(6, 70%, 70%);
 }

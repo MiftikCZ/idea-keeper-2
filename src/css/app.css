@@ -82,16 +82,15 @@ a {
 
 .topbar .first .version {
   font-weight: bold;
-  font-size: 1.25em;
+  font-size: 1.2em;
   position: absolute;
   padding: 0 0.25em;
   rotate: 4deg;
-  background: linear-gradient(45deg,
+  color: hsl(calc(var(--hue)), 50%, 53%);
+  /* background: linear-gradient(45deg,
       hsl(calc(var(--hue) - 20), 50%, 53%),
-      hsl(calc(var(--hue) + 20), 50%, 53%));
-  text-shadow: #fff2 3px 3px 3px;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+      hsl(calc(var(--hue) + 20), 50%, 53%)); */
+  /* text-shadow: #fff2 3px 3px 3px; */
 }
 
 .topbar .first .settings {
@@ -128,6 +127,7 @@ a {
   height: 100%;
   padding: 0.75em;
   background: var(--addtodo-color);
+  background: hsl(var(--hue), 35%, 30%);
   border: none;
   border-radius: 1em;
   color: var(--main-fg);
@@ -141,13 +141,14 @@ a {
   cursor: pointer;
   border-radius: 8px;
   color: #fff8;
-  background: hsl(var(--hue), 54%, 30%);
   transition: 250ms;
 }
 
 
 .addtodo .button .icon {
   color: #fefeffcc;
+  
+  color: hsl(var(--hue), 40%, 70%);
   font-size: 2em;
   height: 100%;
   width: 100%;
@@ -408,4 +409,13 @@ code {
   background: hsl(var(--hue), 50%, 52%, 20%);
   color: hsl(var(--hue), 50%, 60%);
   width: fit-content;
+}
+
+.todos .empty {
+  margin: 0;
+  place-self: center;
+  background: hsl(var(--hue),28%,15%);
+  color: hsl(var(--hue),28%,80%);
+  padding: 0.25em 1em;
+  border-radius: 1em;
 }
